@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "f11f933f-6740-4cbc-9f00-85ee9dd4fd8e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3162015"
+	},
+	"item": [
+		{
+			"name": "Create task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Завершить проект\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://symfonyproject/api/tasks/",
+					"protocol": "http",
+					"host": [
+						"symfonyproject"
+					],
+					"path": [
+						"api",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://symfonyproject/api/tasks/{task_id}",
+					"protocol": "http",
+					"host": [
+						"symfonyproject"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"{task_id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark task as completed",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://symfonyproject/api/tasks/{task_id}/complete",
+					"protocol": "http",
+					"host": [
+						"symfonyproject"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"{task_id}",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task text update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Обновленный текст задачи\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://symfonyproject/api/tasks/{task_id}",
+					"protocol": "http",
+					"host": [
+						"symfonyproject"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"{task_id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting All Tasks List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://symfonyproject/api/tasks",
+					"protocol": "http",
+					"host": [
+						"symfonyproject"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Viewed Task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://symfonyproject/api/tasks/{id_task}/view",
+					"protocol": "http",
+					"host": [
+						"symfonyproject"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"{id_task}",
+						"view"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
